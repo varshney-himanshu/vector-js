@@ -24,6 +24,10 @@ class Vector2D {
         return Math.atan2(this._x, this._y);
     }
 
+    getAngleInDeg() {
+        return Math.atan2(this._y, this._x) * 180 / Math.PI
+    }
+
     setLength(length) {
         let angle = this.getAngle();
         this._x = length * Math.cos(angle);
